@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini Forum</title>
+    <style>
+        .article {
+            border: 1px solid #ccc;
+            margin: 10px 0;
+            padding: 10px;
+        }
+
+        .comment {
+            border: 1px solid #eee;
+            margin: 5px 0;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Mini Forum</h1>
+
+    <label for="articleTitle">Article Title:</label>
+    <input type="text" id="articleTitle">
+    <button onclick="addArticle()">Add Article</button>
+
+    <div id="forum"></div>
+
+    <script src="script.js" defer></script>
+</body>
+</html>

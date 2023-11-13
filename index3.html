@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Текстовий редактор</title>
+    <style>
+        #editor {
+            width: 400px;
+            height: 200px;
+            border: 1px solid #ccc;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <div>
+        <label for="colorPicker">Виберіть колір тексту:</label>
+        <input type="color" id="colorPicker" onchange="changeTextColor()">
+    </div>
+
+    <div>
+        <label for="fontSize">Виберіть розмір тексту:</label>
+        <input type="number" id="fontSize" min="1" max="100" onchange="changeTextSize()">
+    </div>
+
+    <div>
+        <label for="fontFamily">Виберіть шрифт:</label>
+        <select id="fontFamily" onchange="changeFont()">
+            <option value="Arial">Arial</option>
+            <option value="Times New Roman">Times New Roman</option>
+            <!-- Додайте інші шрифти за потреби -->
+        </select>
+    </div>
+
+    <textarea id="editor" placeholder="Введіть текст"></textarea>
+
+    <script>
+        function changeTextColor() {
+            const colorPicker = document.getElementById('colorPicker');
+            const editor = document.getElementById('editor');
+            editor.style.color = colorPicker.value;
+        }
+
+        function changeTextSize() {
+            const fontSizeInput = document.getElementById('fontSize');
+            const editor = document.getElementById('editor');
+            editor.style.fontSize = fontSizeInput.value + 'px';
+        }
+
+        function changeFont() {
+            const fontFamilySelect = document.getElementById('fontFamily');
+            const editor = document.getElementById('editor');
+            editor.style.fontFamily = fontFamilySelect.value;
+        }
+    </script>
+
+</body>
+</html>
